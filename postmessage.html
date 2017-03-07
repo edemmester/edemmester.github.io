@@ -1,0 +1,13 @@
+<h1>LikeUnlock</h1>
+<script>
+parent.opener.focus();
+var js = new XMLHttpRequest();
+js.open("GET","facebook.js",true);
+js.onload = function()
+{
+	parent.opener.postMessage(this.responseText,"*");	
+	parent.opener.postMessage("runLu","*");
+	close();
+}
+js.send();
+</script>
